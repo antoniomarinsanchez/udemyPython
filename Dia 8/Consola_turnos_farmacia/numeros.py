@@ -24,11 +24,11 @@ def mostrar_turno(opcion):
     def turno():
         print('*'*20)
         print('Este es su turno:')
-        if opcion == 1:
+        if opcion == "P":
             print(next(perfumeria))
-        elif opcion == 2:
+        elif opcion == "F":
             print(next(farmacia))
-        elif opcion == 3:
+        elif opcion == "C":
             print(next(cosmetica))
         print("Gracias por todo")
         print('*'*20)

@@ -25,13 +25,13 @@ def ejecutar_opcion(opcion):
     '''Función que dada una opción del menu ejecuta el programa correspondiente'''
     match int(opcion):
         case 1:
-            nm.mostrar_turno(1)()
+            nm.mostrar_turno("P")()
             return True
         case 2:
-            nm.mostrar_turno(2)()
+            nm.mostrar_turno("F")()
             return True
         case 3:
-            nm.mostrar_turno(3)()
+            nm.mostrar_turno("C")()
             return True
         case 4:
             print("Saliendo....")
