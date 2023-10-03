@@ -1,41 +1,35 @@
 ''' Modulo que define los generadores '''
 
-def perfumeria():
+def turnos_perfumeria():
     '''Generador turnos perfumeria'''
-    turno = 0
-    while True:
-        turno +=1
-        yield f'P{turno}'
+    for turno in range(1,10000):
+        yield f'P - {turno}'
 
-def farmacia():
+def turnos_farmacia():
     '''Generador turnos perfumeria'''
-    turno = 0
-    while True:
-        turno +=1
-        yield f'F{turno}'
+    for turno in range(1,10000):
+        yield f'F - {turno}'
 
-def cosmetica():
+def turnos_cosmetica():
     '''Generador turnos perfumeria'''
-    turno = 0
-    while True:
-        turno +=1
-        yield f'C{turno}'
+    for turno in range(1,10000):
+        yield f'C - {turno}'
 
-c = cosmetica()
-p = perfumeria()
-f = farmacia()
+cosmetica = turnos_cosmetica()
+perfumeria = turnos_perfumeria()
+farmacia = turnos_farmacia()
 
-def mostrar_turno(numero):
+def mostrar_turno(opcion):
     '''Decorador del generador'''
     def turno():
         print('*'*20)
         print('Este es su turno:')
-        if numero == 1:
-            print(next(p))
-        elif numero == 2:
-            print(next(f))
-        elif numero == 3:
-            print(next(c))
+        if opcion == 1:
+            print(next(perfumeria))
+        elif opcion == 2:
+            print(next(farmacia))
+        elif opcion == 3:
+            print(next(cosmetica))
         print("Gracias por todo")
         print('*'*20)
         print('\n')
